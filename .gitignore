@@ -30,6 +30,11 @@ jspm_packages/
 *.tgz
 .yarn-integrity
 .cache
+.idea
+scratch
+graphql.config.yml
+cdk.out
+package-lock.json
 !/.projenrc.js
 /test-reports/
 junit.xml
@@ -51,3 +56,4 @@ junit.xml
 .jsii
 tsconfig.json
 !/API.md
+!/cdk.json

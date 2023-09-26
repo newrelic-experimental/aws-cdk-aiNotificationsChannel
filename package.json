@@ -1,8 +1,9 @@
 {
-  "name": "aiNotificationsChannelL2",
+  "name": "@newrelic/aws-cdk-aiNotificationsChannel",
+  "description": "Sample AWS CDK Construct Library by projen",
   "repository": {
     "type": "git",
-    "url": "https://github.com/msummers/aiNotificationsChannelL2.git"
+    "url": "https://github.com/msummers/aiNotificationsChannelCDKL2.git"
   },
   "scripts": {
     "build": "npx projen build",
@@ -29,8 +30,8 @@
     "projen": "npx projen"
   },
   "author": {
-    "name": "Mike Summers",
-    "email": "msummers@newrelic.com",
+    "name": "New Relic",
+    "url": "https://newrelic.com",
     "organization": false
   },
   "devDependencies": {
@@ -38,8 +39,9 @@
     "@types/node": "^16",
     "@typescript-eslint/eslint-plugin": "^6",
     "@typescript-eslint/parser": "^6",
-    "aws-cdk-lib": "2.1.0",
-    "constructs": "10.0.5",
+    "aws-cdk-lib": "2.91.0",
+    "constructs": "^10.2.70",
+    "esbuild": "^0.19.3",
     "eslint": "^8",
     "eslint-import-resolver-node": "^0.3.9",
     "eslint-import-resolver-typescript": "^3.6.0",
@@ -59,14 +61,33 @@
     "typescript": "^5.2.2"
   },
   "peerDependencies": {
-    "aws-cdk-lib": "^2.1.0",
+    "aws-cdk-lib": "^2.91.0",
+    "constructs": "^10.0.5"
+  },
+  "dependencies": {
+    "@cdk-cloudformation/newrelic-observability-ainotificationschannel": "1.0.0-alpha.7",
+    "@cdk-cloudformation/newrelic-observability-ainotificationsdestination": "1.0.0-alpha.7",
     "constructs": "^10.0.5"
   },
   "keywords": [
-    "cdk"
+    "aws-cdk",
+    "awscdk",
+    "cdk",
+    "cfn",
+    "cfn-resources",
+    "cloudformation",
+    "cloudformation-registry",
+    "constructs",
+    "extensions",
+    "l2",
+    "new-relic",
+    "newrelic"
   ],
   "main": "lib/index.js",
   "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "version": "0.0.0",
   "jest": {
     "testMatch": [
@@ -109,7 +130,7 @@
     }
   },
   "types": "lib/index.d.ts",
-  "stability": "stable",
+  "stability": "experimental",
   "jsii": {
     "outdir": "dist",
     "targets": {},

@@ -1,10 +1,5 @@
-# AWS CDK Level 2 Construct for New Relic AI Notifications Channel
-This L2 Construct wraps the L1 `@cdk-cloudformation/newrelic-observability-ainotificationsdestination` and `@cdk-cloudformation/newrelic-observability-ainotificationschannel` Constructs in a single L2 Construct.
-
-## Use
-```typescript
 import * as cdk from 'aws-cdk-lib';
-import { AINotificationsChannel, IAINotificationsChannelProp, AiNotificationsChannelType, AiNotificationsDestinationType, AiNotificationsProduct } from '@newrelic/aws-cdk-aiNotificationsChannel';
+import { AINotificationsChannel, IAINotificationsChannelProp, AiNotificationsChannelType, AiNotificationsDestinationType, AiNotificationsProduct } from './index';
 
 const app = new cdk.App();
 const stack = new cdk.Stack(app, 'L2-AI-Notifications-Channel-Stack', {
@@ -42,16 +37,3 @@ let props: IAINotificationsChannelProp =
 new AINotificationsChannel(stack, 'L2-AI-Notifications-Channel', props);
 
 app.synth();
-```
-
-## Development
-- Developed with [projen](https://github.com/projen/projen)
-- Build `yarn build`
-- `npm` deploy
-
-## Notes
-- https://constructs.dev/contribute
-- https://dev.to/aws-builders/a-beginner-s-guide-to-create-aws-cdk-construct-library-with-projen-5eh4
-- https://github.com/projen/projen
-
-
